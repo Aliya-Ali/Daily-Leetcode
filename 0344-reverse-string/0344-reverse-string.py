@@ -1,5 +1,5 @@
 class Solution:
-    # extra memory is needed if we use the stack and also for recursion problem
+    # extra memory is needed if we use the stack and recursion 
     def reverseString(self, s: List[str]) -> None:
         def recurse(l, r):
             if l < r:
