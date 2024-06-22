@@ -8,11 +8,11 @@ class Solution:
         for i in nums:
             mp[i] = 1 + mp.get(i, 0)
         
-        # we make number of count an index  
+        # we make number of count an index and save the elements 
         for n, ind in mp.items():
             freq[ind].append(n)
         
-        print(freq)
+        #print(freq)
         #now reversing the frequent list and saving them to our list
         for i in range(len(freq)-1, 0, -1):
             for n in freq[i]:
