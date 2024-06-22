@@ -1,16 +1,21 @@
-class Solution:
-    def reverseVowels(self, s: str) -> str:
-        s = [i for i in s]
-        vowel = []
-        for i in s:
-            if i in "aeiouAEIOU":
-                vowel.append(i)
-        
-        for i in range(len(s)):
-            if s[i] in "aeiouAEIOU":
-                s[i] = vowel.pop()
-        
-        s = "".join(s)
-        return s
-                
-        
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseVowels = function(s) {
+    let vowels = "aeiouAEIOU"
+    s = s.split("")
+    let l = 0;
+    let r = s.length -1;
+    while (l < r){
+        if(!vowels.includes(s[l])) l++
+        else if (!vowels.includes(s[r])) r--;
+        if (vowels.includes(s[l]) && vowels.includes(s[r])){
+            [s[l] , s[r]] = [s[r], s[l]]
+            l ++;
+            r--;
+        }
+    }
+    return s.join('')
+    
+};
