@@ -15,7 +15,7 @@ class Solution:
             else:
                 l = mid + 1
         
-        if l > 10**9:
+        if l > 10**7:
             return -1
         else:
             return l
