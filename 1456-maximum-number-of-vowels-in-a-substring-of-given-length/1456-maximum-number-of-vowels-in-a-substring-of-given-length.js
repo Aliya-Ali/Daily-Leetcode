@@ -19,13 +19,9 @@ var maxVowels = function(s, k) {
     
     let max_count = count
     for (let i= 0; i<s.length - k; i++){
-        if(vowel.has(s[i]) ){
-            count -=1 
-            }
-        if (vowel.has(s[i+k]) ){
-            count +=1
-            }
-        console.log(count)
+        if(vowel.has(s[i]) )count -=1 
+        if (vowel.has(s[i+k]) )count +=1
+        //console.log(count)
         max_count = Math.max(max_count , count)
     }
     return max_count
