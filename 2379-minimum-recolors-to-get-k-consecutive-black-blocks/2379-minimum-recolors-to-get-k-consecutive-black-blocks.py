@@ -9,7 +9,7 @@ class Solution:
             if blocks[right] == "W":
                 white += 1
             
-            while right - left + 1 > k:
+            if right - left + 1 > k:
                 if blocks[left] == "W":
                     white -=1
                 left +=1
