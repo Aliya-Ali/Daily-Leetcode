@@ -20,8 +20,6 @@ class Solution:
                 
         leave(root1, res2)
         leave(root2, res1)
-        print(res1)
-        print(res2)
         if res1 == res2:
             return True
         return False
