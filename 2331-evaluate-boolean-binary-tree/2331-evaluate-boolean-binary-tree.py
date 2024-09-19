@@ -15,7 +15,7 @@ class Solution:
             
             if root.val == 3:
                 return (left and right)
-            elif root.val == 2:
+            else:
                 return (left or right)
             
             
